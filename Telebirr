@@ -1,68 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Telebirr Demo</title>
-  <style>
-    body {
-      font-family: Arial;
-      background: #f2f2f2;
-      text-align: center;
-      padding-top: 50px;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      width: 300px;
-      margin: auto;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px gray;
-    }
-
-    h1 {
-      color: green;
-    }
-
-    input {
-      width: 90%;
-      padding: 10px;
-      margin: 10px 0;
-    }
-
-    button {
-      background: green;
-      color: white;
-      padding: 10px;
-      border: none;
-      width: 100%;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    #msg {
-      margin-top: 10px;
-      color: blue;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Demo Payment</title>
+<style>
+body{
+  font-family: Arial;
+  background:#f2f2f2;
+}
+.card{
+  width:320px;
+  margin:50px auto;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 0 10px gray;
+}
+input,button{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  box-sizing:border-box;
+}
+button{
+  background:green;
+  color:white;
+  border:none;
+}
+</style>
 </head>
-
 <body>
 
 <div class="card">
-  <h1>Telebirr Payment</h1>
+  <h2>Demo Payment</h2>
 
-  <input type="text" placeholder="Phone Number">
-  <input type="number" placeholder="Amount">
+  <input id="name" placeholder="Name">
+  <input id="phone" placeholder="Phone Number">
+  <input id="amount" type="number" placeholder="Amount">
 
-  <button onclick="pay()">Pay Now</button>
+  <button onclick="pay()">Pay</button>
 
-  <p id="msg"></p>
+  <p id="result"></p>
 </div>
 
 <script>
-function pay() {
-  document.getElementById("msg").innerHTML =
-    "Payment request sent (simulation) 👍";
+function pay(){
+  let name=document.getElementById("name").value;
+  let amount=document.getElementById("amount").value;
+
+  document.getElementById("result").innerHTML =
+    "Demo Payment Successful!<br>Name: "
+    + name + "<br>Amount: " + amount;
 }
 </script>
 
