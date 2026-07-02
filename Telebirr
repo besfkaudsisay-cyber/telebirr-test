@@ -9,6 +9,7 @@
       text-align: center;
       padding-top: 50px;
     }
+
     .card {
       background: white;
       padding: 20px;
@@ -17,14 +18,17 @@
       border-radius: 10px;
       box-shadow: 0px 0px 10px gray;
     }
+
     h1 {
       color: green;
     }
+
     input {
       width: 90%;
       padding: 10px;
       margin: 10px 0;
     }
+
     button {
       background: green;
       color: white;
@@ -34,15 +38,21 @@
       cursor: pointer;
       border-radius: 5px;
     }
+
+    #msg {
+      margin-top: 10px;
+      color: blue;
+    }
   </style>
 </head>
+
 <body>
 
 <div class="card">
   <h1>Telebirr Payment</h1>
 
-  <input type="text" placeholder="Enter phone number">
-  <input type="number" placeholder="Enter amount">
+  <input type="text" placeholder="Phone Number">
+  <input type="number" placeholder="Amount">
 
   <button onclick="pay()">Pay Now</button>
 
